@@ -1,8 +1,4 @@
 #Bye-compiled / optimized / DLL files
-
 __pycache__/
-*.pyc
-*$py.class
-
 *.sqlite3
 
