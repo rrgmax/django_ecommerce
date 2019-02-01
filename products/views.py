@@ -1,5 +1,5 @@
 from django.views.generic import ListView
-rom django.shortcuts import render
+from django.shortcuts import render
 
 from .models import Product
 
@@ -8,6 +8,7 @@ from .models import Product
 class ProductListView(ListView):
     #traz todos os produtos do banco de dados sem filtrar nada 
     queryset = Product.objects.all()
+    template_name = "products/list.html"
 
 #Function Based View
 def product_list_view(request):
@@ -16,4 +17,3 @@ def product_list_view(request):
         'qs': queryset
     }
     return render(request, "products/list.html", context)
-    
