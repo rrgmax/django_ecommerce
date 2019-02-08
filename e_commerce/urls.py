@@ -26,7 +26,7 @@ urlpatterns = [
     path('products/', ProductDetailView.as_view()),
     path('products-fbv/', product_detail_view), 
     path('admin/', admin.site.urls),
- ]
+]
 
 if settings.DEBUG:
     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
